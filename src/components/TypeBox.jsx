@@ -17,6 +17,9 @@ const TypeBox = () =>{
     const Sentence = useRef(getSentence())
     const [activeWord, setActiveWord] = useState(0)
 
+    function processInput(value){
+        
+    }
 
     return(
         <div>
@@ -37,7 +40,7 @@ const TypeBox = () =>{
                       value    = {userInput}
                       onChange = {
                                   (e) =>
-                                    setuserInput(e.target.value)
+                                    processInput(e.target.value)
                             }     
                       
                 />
