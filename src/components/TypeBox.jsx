@@ -18,7 +18,14 @@ const TypeBox = () =>{
     const [activeWord, setActiveWord] = useState(0)
 
     function processInput(value){
-        
+        if(value.endsWith(' ')){
+            setActiveWord(
+                index => index+1 
+            )
+            setuserInput('')
+        }else{
+            setuserInput(value)
+        }  
     }
 
     return(
