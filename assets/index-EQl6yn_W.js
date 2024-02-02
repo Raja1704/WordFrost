@@ -46,4 +46,4 @@ Error generating stack: `+u.message+`
         <App />
         </React.StrictMode>,
     )
-`.split(" "),Md=()=>{const[e,n]=Qn.useState(""),t=Qn.useRef(Od()),[r,l]=Qn.useState(0);function u(o){}return ke.jsxs("div",{children:[ke.jsx("p",{children:t.current.map((o,i)=>i==r?ke.jsxs("b",{children:[o," "]}):ke.jsxs("span",{children:[o," "]}))}),ke.jsx("input",{type:"text",value:e,onChange:o=>(o.target.value,void 0)})]})};function Dd(){return ke.jsxs("div",{children:[ke.jsx(Rd,{}),ke.jsx(Md,{})]})}Ql.createRoot(document.getElementById("root")).render(ke.jsx(wc.StrictMode,{children:ke.jsx(Dd,{})}));
+`.split(" "),Md=()=>{const[e,n]=Qn.useState(""),t=Qn.useRef(Od()),[r,l]=Qn.useState(0);function u(o){o.endsWith(" ")?(l(i=>i+1),n("")):n(o)}return ke.jsxs("div",{children:[ke.jsx("p",{children:t.current.map((o,i)=>i==r?ke.jsxs("b",{children:[o," "]}):ke.jsxs("span",{children:[o," "]}))}),ke.jsx("input",{type:"text",value:e,onChange:o=>u(o.target.value)})]})};function Dd(){return ke.jsxs("div",{children:[ke.jsx(Rd,{}),ke.jsx(Md,{})]})}Ql.createRoot(document.getElementById("root")).render(ke.jsx(wc.StrictMode,{children:ke.jsx(Dd,{})}));
