@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-const PlayGame = ({onGame, onChangeScore}) => {
+
+
+// Remove the unused import statement for PropTypes
+// import PropTypes from 'prop-types';
+
+// eslint-disable-next-line react/prop-types
+const PlayGame = ({onChangeScore}) => {
   const [defaultData] = useState('Ea laboris reprehenderit mollit irure veniam est irure. Consequat ipsum cillum voluptate cupidatat officia. Lorem enim sint id reprehenderit do reprehenderit. Qui ad commodo minim aliquip sunt cupidatat Lorem quis. Dolore labore nostrud nisi deserunt eiusmod. Commodo cupidatat adipisicing officia consequat nostrud nulla pariatur Lorem. Commodo nulla eu mollit sunt ad amet dolor fugiat id dolore aliquip eiusmod reprehenderit velit. Consectetur exercitation tempor Lorem duis incididunt pariatur cupidatat cupidatat pariatur cillum reprehenderit exercitation deserunt. Non id labore dolore ad minim ex cupidatat anim nostrud dolore officia id.');
   const [dataTyping, setDataTyping] = useState([]);
   const [textTyping, setTextTyping] = useState({
@@ -24,7 +30,7 @@ const PlayGame = ({onGame, onChangeScore}) => {
         setTextTyping({...textTyping, position: 0});
       }
       
-    }, [textTyping.position])
+    }, [textTyping.position, dataTyping.length, defaultData, textTyping]) // Include 'textTyping' in the dependency array
     const handleChangeTyping = e => {
         const valueInput = e.target.value;
         if(!valueInput.includes(' ')){
@@ -57,7 +63,7 @@ const PlayGame = ({onGame, onChangeScore}) => {
               ? 'false'
               : ''
           }>
-              {word.value}
+              {word.value}   
           </li>
           )
         }

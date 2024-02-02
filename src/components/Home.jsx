@@ -1,15 +1,22 @@
 
+import PropTypes from 'prop-types';
+
 const Home = ({ onGame }) => {
     
     return (
             <div className="home">
-                <div className="title">TYPING GAME</div>
+                <div className="title">WordForst</div>
                 <div className="author">
-                    Coding & <br />
-                    Design by Lun Dev
+                    By <br />
+                    Raja
                 </div>
                 <button onClick={ () => onGame('playing') } className='btnPlay'>Play Game</button>
             </div>
     );
 }
+
+Home.propTypes = {
+    onGame: PropTypes.func.isRequired
+};
+
 export default Home;
